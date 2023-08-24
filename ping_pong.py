@@ -22,6 +22,9 @@ GRAY = (200, 200, 200)
 RED = (255, 0, 0)
 DARK_BLUE = (0, 0, 128)
 
+LIGHT_BLUE = (173, 216, 230)  # A shade of light blue
+LIGHT_RED = (255, 182, 193)   # A shade of light red
+
 # Screen and clock
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Ping Pong")
@@ -41,8 +44,8 @@ def draw_home_screen():
     one_player_rect = one_player_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 - FONT_SIZE))
     two_player_rect = two_player_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 + FONT_SIZE))
 
-    pygame.draw.rect(screen, GRAY, one_player_rect.inflate(20, 10))
-    pygame.draw.rect(screen, GRAY, two_player_rect.inflate(20, 10))
+    pygame.draw.rect(screen, LIGHT_BLUE, one_player_rect.inflate(20, 10))
+    pygame.draw.rect(screen, LIGHT_RED, two_player_rect.inflate(20, 10))
 
     screen.blit(one_player_text, one_player_rect)
     screen.blit(two_player_text, two_player_rect)
